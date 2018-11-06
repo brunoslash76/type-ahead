@@ -23,6 +23,10 @@ function displayMatches() {
 
         const regexp = new RegExp(this.value, 'gi');
         let span = `<span class="hl">${this.value}</span>`;
+<<<<<<< HEAD
+=======
+        // this.value === '' ? span = '': span = span;
+>>>>>>> f798021ab18ae2e7f65b087b73a02bf06029913c
         const cityName = place.city.replace(
             regexp,
             span
