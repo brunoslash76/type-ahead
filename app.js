@@ -22,18 +22,17 @@ function displayMatches() {
     const html = matchArray.map(place => {
 
         const regexp = new RegExp(this.value, 'gi');
+        let span = `<span class="hl">${this.value}</span>`;
+        // this.value === '' ? span = '': span = span;
         const cityName = place.city.replace(
             regexp,
-            `<span class="hl">
-                ${this.value}
-            </span>`
+            span
         );
+
 
         const stateName = place.state.replace(
             regexp,
-            `<span class="hl">
-                ${this.value}
-            </span>`
+            span
         );
 
         return `
